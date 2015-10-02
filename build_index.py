@@ -63,7 +63,7 @@ print("bulk indexing...")
 
 res = es.bulk(index = INDEX_NAME, body= bulk_data, refresh=True)
 
-res = es.search(index=INDEX_NAME, size=2, body={
+res = es.search(index=INDEX_NAME,  body={
 				"query":{"match_all":{}}})
 print(" response: %s "%(res))
 
@@ -71,4 +71,37 @@ print("results: ")
 for hit in res['hits']['hits']:
 	print (hit["_source"])
 
+
+print 'Search results for persons of age 21 \n'
+
+res = es.search(index=INDEX_NAME, body={
+                          		      "query":{
+							"match":{
+								"age":"21"
+								}
+							}
+						}
+		)
+					
+#print(" response: %s "%(res))
+
+print("results: ")
+for hit in res['hits']['hits']:
+        print (hit["_source"])
+
+print "\nSearch result for persons with their name containing 'Connolly'\n"
+res = es.search(index=INDEX_NAME, body={
+                                              "query":{
+                                                        "match":{
+                                                                "name":"Connolly"
+                                                                }
+                                                        }
+                                                }
+                )
+
+#print(" response: %s "%(res))
+
+print("results: ")
+for hit in res['hits']['hits']:
+        print (hit["_source"])
 
