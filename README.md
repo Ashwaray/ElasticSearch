@@ -5,3 +5,6 @@
 2. ElasticSearch server version used elasticsearch-2.0.0-beta1
 3. Kaggle Database used : "http://apps.sloanahrens.com/qbox-blog-resources/kaggle-titanic-data/test.csv"
 4. Refer here for tutorial : https://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-queries.html
+5. Also added spelling checker using "Damerau–Levenshtein distance" and Elastic search to give it support over large data and also it also give similar phonetic words
+
+Njoy!!!
