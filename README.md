@@ -8,3 +8,4 @@
 5. Also added spelling checker using "Damerau–Levenshtein distance" and Elastic search to give it support over large data and also it also give similar phonetic words
 
 Njoy!!!
+Please feel free to fork this Repository and send pull request.
