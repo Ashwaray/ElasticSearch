@@ -1,4 +1,4 @@
 #!/bin/bash
 # setup test
 
-touch lol.sh
+touch /Users/ashwaray.chauhan/ashwaray/test/lol.sh
